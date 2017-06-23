@@ -47,12 +47,10 @@ p:last-of-type {
 }
 /* line 59, ../scss/edits.scss */
 .gregCta p {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 1.3em;
   font-weight: 300;
   text-transform: none;
+  letter-spacing: 1px;
   color: #111;
   text-align: center;
   margin: 0;
@@ -65,14 +63,18 @@ p:last-of-type {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/* line 73, ../scss/edits.scss */
+/* line 72, ../scss/edits.scss */
+.gregCta a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* line 76, ../scss/edits.scss */
 .gregCta .ctaForm {
   max-width: 950px;
   margin: .5em auto;
   display: flex;
   font-size: 16px;
 }
-/* line 78, ../scss/edits.scss */
+/* line 81, ../scss/edits.scss */
 .gregCta .ctaForm input {
   width: 78%;
   background: transparent;
@@ -82,7 +84,7 @@ p:last-of-type {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/* line 86, ../scss/edits.scss */
+/* line 89, ../scss/edits.scss */
 .gregCta .ctaForm input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-weight: 700;
@@ -90,7 +92,7 @@ p:last-of-type {
   letter-spacing: 2px;
   font-size: 1em;
 }
-/* line 90, ../scss/edits.scss */
+/* line 93, ../scss/edits.scss */
 .gregCta .ctaForm input::-moz-placeholder {
   /* Firefox 19+ */
   font-weight: 700;
@@ -98,7 +100,7 @@ p:last-of-type {
   letter-spacing: 2px;
   font-size: 1em;
 }
-/* line 94, ../scss/edits.scss */
+/* line 97, ../scss/edits.scss */
 .gregCta .ctaForm input:-ms-input-placeholder {
   /* IE 10+ */
   font-weight: 700;
@@ -106,7 +108,7 @@ p:last-of-type {
   letter-spacing: 2px;
   font-size: 1em;
 }
-/* line 98, ../scss/edits.scss */
+/* line 101, ../scss/edits.scss */
 .gregCta .ctaForm input:-moz-placeholder {
   /* Firefox 18- */
   font-weight: 700;
@@ -114,7 +116,7 @@ p:last-of-type {
   letter-spacing: 2px;
   font-size: 1em;
 }
-/* line 103, ../scss/edits.scss */
+/* line 106, ../scss/edits.scss */
 .gregCta .ctaForm .btn {
   font-size: 1em;
   padding: 6px 12px;
@@ -126,52 +128,63 @@ p:last-of-type {
   border-bottom-left-radius: 0px;
 }
 
-/* line 117, ../scss/edits.scss */
+/* line 120, ../scss/edits.scss */
 #quote-3 .container, #careers .container {
   max-width: 950px;
   margin: 0 auto;
   padding: 5rem 0;
 }
-/* line 121, ../scss/edits.scss */
+/* line 124, ../scss/edits.scss */
 #quote-3 .container h2, #careers .container h2 {
   text-align: center;
   margin-top: 0 !important;
   font-weight: 600;
 }
-/* line 126, ../scss/edits.scss */
+/* line 129, ../scss/edits.scss */
 #quote-3 .container p, #careers .container p {
   font-size: 18px;
   text-align: center;
 }
-/* line 130, ../scss/edits.scss */
+/* line 133, ../scss/edits.scss */
 #quote-3 .container .btn, #careers .container .btn {
   text-shadow: 1px 1px 5px #666;
 }
 
-/* line 136, ../scss/edits.scss */
+/* line 139, ../scss/edits.scss */
 #quote-4 {
   overflow: auto;
   display: flex;
 }
-/* line 139, ../scss/edits.scss */
+/* line 142, ../scss/edits.scss */
 #quote-4 .col-sm-7 {
   padding: 2.5em;
 }
-/* line 141, ../scss/edits.scss */
+/* line 144, ../scss/edits.scss */
 #quote-4 .col-sm-7 .inner {
   width: 100%;
   max-width: 682.5px;
   float: right;
 }
-/* line 145, ../scss/edits.scss */
+/* line 148, ../scss/edits.scss */
 #quote-4 .col-sm-7 .inner h2 {
   text-align: left;
   margin-top: 0 !important;
   font-weight: 600;
   max-width: 450px;
 }
-/* line 151, ../scss/edits.scss */
+/* line 154, ../scss/edits.scss */
 #quote-4 .col-sm-7 .inner p {
   font-size: 18px;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  /* line 163, ../scss/edits.scss */
+  #quote-4 {
+    flex-direction: column;
+  }
+  /* line 165, ../scss/edits.scss */
+  #quote-4 .col-sm-7 {
+    padding: 1em 15px;
+  }
 }
