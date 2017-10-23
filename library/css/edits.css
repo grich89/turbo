@@ -1,190 +1,337 @@
 /* Colors */
 /* Mixins */
-/* Turbonomic Styles */
-/* line 24, ../scss/edits.scss */
-h2 {
-  margin-top: 0.4em !important;
-  margin-bottom: .5em;
+/* Custom Animations */
+/* line 22, ../scss/edits.scss */
+.fast {
+  -vendor-animation-duration: 1s;
+  -vendor-animation-delay: 0s;
 }
 
-/* line 29, ../scss/edits.scss */
-p {
-  font-size: 16px;
-  margin-bottom: 1em;
-}
-/* line 32, ../scss/edits.scss */
-p:last-of-type {
-  margin: 0;
+/* line 26, ../scss/edits.scss */
+.slow {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 1s;
 }
 
+/* line 30, ../scss/edits.scss */
+.reallyslow {
+  -vendor-animation-duration: 6s;
+  -vendor-animation-delay: 3s;
+}
+
+/* Northeastern Styles */
 /* line 37, ../scss/edits.scss */
-.btn {
-  background: #2C9427;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.article-topper {
+  position: relative;
+  border-bottom: 5px solid #e84040;
+  padding: 0;
+  background-image: url("http://news.northeastern.edu/wp-content/uploads/2017/10/friends_up_2.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+/* line 44, ../scss/edits.scss */
+.article-topper .overlay {
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -300px 200px rgba(232, 64, 64, 0.2) inset;
+  padding-top: 350px;
 }
 
-/* line 43, ../scss/edits.scss */
-.custom-header {
-  display: flex;
-  height: 60vh;
-  align-items: center;
+/* line 52, ../scss/edits.scss */
+.icon {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
 }
-/* line 47, ../scss/edits.scss */
-.custom-header span#custom-header-tagline {
-  max-width: 750px;
-  width: 100%;
-  margin: 1em auto 0 auto;
+/* line 56, ../scss/edits.scss */
+.icon i {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 72px;
+  color: #e84040;
 }
 
-/* line 54, ../scss/edits.scss */
-.gregCta {
-  background: gold;
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-}
-/* line 59, ../scss/edits.scss */
-.gregCta p {
-  font-size: 1.3em;
-  font-weight: 300;
-  text-transform: none;
-  letter-spacing: 1px;
-  color: #111;
-  text-align: center;
-  margin: 0;
-}
-/* line 68, ../scss/edits.scss */
-.gregCta a {
-  color: #111;
-  padding: 0 .3em;
-  font-weight: 700;
+/* line 65, ../scss/edits.scss */
+.friending-made-easy {
+  margin: 0 auto;
+  max-width: 760px;
+  position: relative;
+  margin-bottom: 95px;
+  font-family: trim-poster,sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 /* line 72, ../scss/edits.scss */
-.gregCta a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-/* line 76, ../scss/edits.scss */
-.gregCta .ctaForm {
-  max-width: 950px;
-  margin: .5em auto;
-  display: flex;
-  font-size: 16px;
-}
-/* line 81, ../scss/edits.scss */
-.gregCta .ctaForm input {
-  width: 78%;
-  background: transparent;
-  border: 0px;
-  padding: 1em;
-  background: #fff;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-/* line 89, ../scss/edits.scss */
-.gregCta .ctaForm input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-}
-/* line 93, ../scss/edits.scss */
-.gregCta .ctaForm input::-moz-placeholder {
-  /* Firefox 19+ */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-}
-/* line 97, ../scss/edits.scss */
-.gregCta .ctaForm input:-ms-input-placeholder {
-  /* IE 10+ */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-}
-/* line 101, ../scss/edits.scss */
-.gregCta .ctaForm input:-moz-placeholder {
-  /* Firefox 18- */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-}
-/* line 106, ../scss/edits.scss */
-.gregCta .ctaForm .btn {
-  font-size: 1em;
-  padding: 6px 12px;
-  background: #111;
+.friending-made-easy .featured-text {
+  font-size: 3em;
+  letter-spacing: 3px;
+  line-height: 100%;
+  background: #e84040;
   color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  display: table;
+  padding: .2em .6em;
+}
+/* line 82, ../scss/edits.scss */
+.friending-made-easy .featured-subtext {
+  height: 130px;
+}
+/* line 84, ../scss/edits.scss */
+.friending-made-easy .featured-subtext .inner {
+  line-height: 280%;
+  position: absolute;
+  left: 31px;
+  bottom: 0;
+  letter-spacing: -2px;
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 3px 3px 0px black;
 }
 
-/* line 120, ../scss/edits.scss */
-#quote-3 .container, #careers .container {
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 5rem 0;
-}
-/* line 124, ../scss/edits.scss */
-#quote-3 .container h2, #careers .container h2 {
-  text-align: center;
-  margin-top: 0 !important;
-  font-weight: 600;
-}
-/* line 129, ../scss/edits.scss */
-#quote-3 .container p, #careers .container p {
-  font-size: 18px;
-  text-align: center;
-}
-/* line 133, ../scss/edits.scss */
-#quote-3 .container .btn, #careers .container .btn {
-  text-shadow: 1px 1px 5px #666;
+/* line 97, ../scss/edits.scss */
+.article-topper__meta-info {
+  border-top-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 139, ../scss/edits.scss */
-#quote-4 {
-  overflow: auto;
-  display: flex;
+/* line 101, ../scss/edits.scss */
+.article-topper__social-link--twitter {
+  background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/twitter-icon.svg);
 }
-/* line 142, ../scss/edits.scss */
-#quote-4 .col-sm-7 {
-  padding: 2.5em;
+
+/* line 105, ../scss/edits.scss */
+.article-topper__social-link--facebook {
+  background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/facebook-icon.svg);
+}
+
+/* Create 'move up' section */
+/* line 110, ../scss/edits.scss */
+.moveup {
+  margin-top: -5.5em;
+  z-index: 2;
+  position: relative;
+}
+/* line 114, ../scss/edits.scss */
+.moveup .article-topper__overline-mod {
+  position: relative;
+}
+/* line 116, ../scss/edits.scss */
+.moveup .article-topper__overline-mod .article-topper__overline {
+  background: #e84040;
+  color: #fff;
+}
+/* line 121, ../scss/edits.scss */
+.moveup .article-topper__width {
+  border-top: 5px solid #e84040;
+  padding: 1em 1.5em;
+  background: #fff;
+  position: relative;
+}
+/* line 126, ../scss/edits.scss */
+.moveup .article-topper__width:before {
+  content: '';
+  background: #e84040;
+  width: 5px;
+  height: 5.5em;
+  top: -5px;
+  left: -5px;
+  position: absolute;
+}
+/* line 135, ../scss/edits.scss */
+.moveup .article-topper__width:after {
+  content: '';
+  background: #e84040;
+  width: 5px;
+  height: 5.5em;
+  top: -5px;
+  right: -5px;
+  position: absolute;
 }
 /* line 144, ../scss/edits.scss */
-#quote-4 .col-sm-7 .inner {
-  width: 100%;
-  max-width: 682.5px;
-  float: right;
+.moveup .article-topper__width .article-topper__hgroup {
+  background-color: #fff !important;
 }
-/* line 148, ../scss/edits.scss */
-#quote-4 .col-sm-7 .inner h2 {
-  text-align: left;
-  margin-top: 0 !important;
-  font-weight: 600;
-  max-width: 450px;
+/* line 146, ../scss/edits.scss */
+.moveup .article-topper__width .article-topper__hgroup h1 {
+  color: black;
+  margin-bottom: .25em;
 }
-/* line 154, ../scss/edits.scss */
-#quote-4 .col-sm-7 .inner p {
-  font-size: 18px;
-  text-align: left;
+/* line 150, ../scss/edits.scss */
+.moveup .article-topper__width .article-topper__hgroup .article-topper__byline {
+  font-family: akkurat,sans-serif;
+  font-size: 16px;
+}
+/* line 153, ../scss/edits.scss */
+.moveup .article-topper__width .article-topper__hgroup .article-topper__byline a {
+  color: #1a1a1a;
 }
 
+/* Article Content */
+/* line 162, ../scss/edits.scss */
+.article-content {
+  padding-top: 0;
+}
+/* line 164, ../scss/edits.scss */
+.article-content .article-body a:not(.media-img):not(.article__related-posts__link):not(.article__qa__intro__author-mod):not(.article-topper__social-link):not(.article-topper__byline__author-name):not(.t-link):not(.link-button) {
+  color: #e84040;
+  box-shadow: 0 -1px 0 rgba(232, 64, 64, 0.4) inset, 0 1.5em 0 transparent inset;
+}
+/* line 167, ../scss/edits.scss */
+.article-content .article-body a:not(.media-img):not(.article__related-posts__link):not(.article__qa__intro__author-mod):not(.article-topper__social-link):not(.article-topper__byline__author-name):not(.t-link):not(.link-button):hover {
+  background: black;
+  color: #fff;
+}
+/* line 172, ../scss/edits.scss */
+.article-content p.pullQuote {
+  position: relative;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* line 176, ../scss/edits.scss */
+.article-content p.pullQuote:before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: -30px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 3px;
+  height: 100%;
+}
+
+/* line 187, ../scss/edits.scss */
+.article__featured-image-mod, .aligncenter {
+  max-width: 850px;
+}
+/* line 189, ../scss/edits.scss */
+.article__featured-image-mod * + *, .aligncenter * + * {
+  margin-top: 0;
+}
+/* line 192, ../scss/edits.scss */
+.article__featured-image-mod .article__image__caption, .article__featured-image-mod .wp-caption-text, .aligncenter .article__image__caption, .aligncenter .wp-caption-text {
+  background: #e84040;
+  color: #fff;
+  padding: 1em;
+}
+
+/* line 199, ../scss/edits.scss */
+.aligncenter * + * {
+  margin-top: -.8em;
+}
+
+/* line 205, ../scss/edits.scss */
+.article-footer__meta .t-link--has-comma a.t-link {
+  border: 1px solid rgba(232, 64, 64, 0.7);
+  padding: .1em .5em;
+  display: inline-block;
+  margin-bottom: .5em;
+  margin-right: .15em;
+  border-radius: 3px;
+  color: rgba(232, 64, 64, 0.7);
+}
+/* line 213, ../scss/edits.scss */
+.article-footer__meta .t-link--has-comma a.t-link:hover {
+  border: 1px solid #e84040;
+  background-color: #e84040;
+  color: #fff;
+  box-shadow: none;
+}
+/* line 220, ../scss/edits.scss */
+.article-footer__meta .t-link--has-comma:not(:last-child):after {
+  color: #e84040;
+}
+/* line 225, ../scss/edits.scss */
+.article-footer__meta .author a.t-link {
+  font-weight: 600;
+  color: #e84040;
+  box-shadow: 0 -1px 0 rgba(232, 64, 64, 0.4) inset, 0 1.5em 0 transparent inset;
+}
+/* line 229, ../scss/edits.scss */
+.article-footer__meta .author a.t-link:hover {
+  background: black;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Scrolling Nav */
+/* line 239, ../scss/edits.scss */
+.article-progress__nav-trigger {
+  background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/search-icon--white.svg);
+  background-color: #e84040;
+  width: 50px;
+  border-left: 1px solid black;
+}
+/* line 244, ../scss/edits.scss */
+.article-progress__nav-trigger:after {
+  border: 0px;
+}
+
+/* line 248, ../scss/edits.scss */
+.article-progress__width {
+  max-width: 100%;
+}
+
+/* line 251, ../scss/edits.scss */
+.article-progress__hgroup {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* line 255, ../scss/edits.scss */
+.article-progress__social-list {
+  padding-right: 1em;
+}
+/* line 257, ../scss/edits.scss */
+.article-progress__social-list li {
+  padding-left: .5em;
+}
+
+/* Article Footer */
+/* line 263, ../scss/edits.scss */
+.article-footer-recirc__width {
+  padding-top: 1.5em;
+}
+
+/* line 266, ../scss/edits.scss */
+.article-footer-recirc__title {
+  border-top: 2px solid;
+}
+
+/* line 270, ../scss/edits.scss */
+.index__split-posts .tease__hed {
+  display: block;
+  padding-top: .5em;
+  padding-bottom: 0;
+  margin: 0;
+}
+/* line 276, ../scss/edits.scss */
+.index__split-posts .tease__dek {
+  line-height: 150%;
+  padding: .5em 0 .25em 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  /* line 163, ../scss/edits.scss */
-  #quote-4 {
-    flex-direction: column;
+  /* line 287, ../scss/edits.scss */
+  .icon i {
+    color: #fff;
+    font-size: 2em;
+    z-index: 3;
+    right: .5em;
   }
-  /* line 165, ../scss/edits.scss */
-  #quote-4 .col-sm-7 {
-    padding: 1em 15px;
+
+  /* line 294, ../scss/edits.scss */
+  .friending-made-easy {
+    margin-bottom: 84px;
+  }
+  /* line 296, ../scss/edits.scss */
+  .friending-made-easy .featured-text {
+    display: block;
+    font-size: 2em;
+  }
+
+  /* line 302, ../scss/edits.scss */
+  .av-container .aligncenter {
+    max-width: 1410px;
+    width: 100% !important;
   }
 }

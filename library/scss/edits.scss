@@ -1,12 +1,10 @@
 /* Colors */
-
-$green: #2C9427;
-$gold: gold;
+$red: #e84040;
 
 /* Mixins */
 
 @mixin insetShadow {
-	box-shadow: 0px 0px 40px rgba(0,0,0,0.3) inset;
+	box-shadow: 0px -300px 200px rgba($red,0.2) inset;
 }
 
 @mixin textShadow {
@@ -19,151 +17,291 @@ $gold: gold;
 	letter-spacing: 2px;
 }
 
-/* Turbonomic Styles */
+/* Custom Animations */
 
-h2 {
-	margin-top: .4em!important;
-	margin-bottom: .5em;
+.fast {
+    -vendor-animation-duration: 1s;
+    -vendor-animation-delay: 0s;
+}
+.slow {
+    -vendor-animation-duration: 3s;
+    -vendor-animation-delay: 1s;
+}
+.reallyslow {
+    -vendor-animation-duration: 6s;
+    -vendor-animation-delay: 3s;
 }
 
-p {
-	font-size: 16px;
-	margin-bottom: 1em;
-	&:last-of-type {
-		margin: 0;
+/* Northeastern Styles */
+
+.article-topper {
+	position: relative;
+	border-bottom: 5px solid $red;
+	padding: 0;
+	background-image: url('http://news.northeastern.edu/wp-content/uploads/2017/10/friends_up_2.jpg');
+	background-size: cover;
+	background-position: center top;
+	.overlay {
+		overflow: auto;
+		background: rgba(0,0,0,0.5);
+		@include insetShadow;
+		padding-top: 350px;
 	}
 }
 
-.btn {
-	background: $green;
-	color: #fff;
-	@include ctaLinkText;
-}
-
-.custom-header {
-	display: flex;
-	height: 60vh;
-	align-items: center;
-	span#custom-header-tagline {
-		max-width: 750px;
-		width: 100%;
-		margin: 1em auto 0 auto;
+.icon {
+	max-width: 760px;
+	margin: 0 auto;
+	position: relative;
+	i {
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		font-size: 72px;
+		color: $red;
 	}
 }
 
-.gregCta {
-	background: $gold;
-	padding-top: 2.5em;
-	padding-bottom: 2.5em;
-	//@include insetShadow;
-	p {
-		font-size: 1.3em;
-		font-weight: 300;
-		text-transform: none;
-		letter-spacing: 1px;
-		color: #111;
-		text-align: center;
-		margin: 0;
+.friending-made-easy {
+	margin: 0 auto;
+	max-width: 760px;
+	position: relative;
+	margin-bottom: 95px;
+	font-family: trim-poster,sans-serif;
+	text-transform: uppercase;
+	.featured-text {
+		font-size: 3em;
+		letter-spacing: 3px;
+		line-height: 100%;
+		background: $red;
+		color: #fff;
+		display: table;
+		//margin: 0 auto;
+		padding: .2em .6em;
 	}
-	a {
-		color: #111;
-		padding: 0 .3em;
-		@include ctaLinkText;
-		&:hover {
-			background: rgba(255,255,255,0.3);
-		}
-	}
-	.ctaForm {
-		max-width: 950px;
-		margin: .5em auto;
-		display: flex;
-		font-size: 16px;
-		input {
-			width: 78%;
-			background: transparent;
-			border: 0px;
-			padding: 1em;
-			background: #fff;
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-			  @include ctaLinkText;
-			  font-size: 1em;
-			}
-			&::-moz-placeholder { /* Firefox 19+ */
-			  @include ctaLinkText;
-			  font-size: 1em;
-			}
-			&:-ms-input-placeholder { /* IE 10+ */
-			  @include ctaLinkText;
-			  font-size: 1em;
-			}
-			&:-moz-placeholder { /* Firefox 18- */
-			  @include ctaLinkText;
-			  font-size: 1em;
-			}
-		}
-		.btn {
-			font-size: 1em;
-			padding: 6px 12px;
-			background: #111;
-			color: #fff;
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-			border-top-left-radius: 0px;
-			border-bottom-left-radius: 0px;
-		}
-	}
-}
-
-#quote-3, #careers {
-	.container {
-		max-width: 950px;
-		margin: 0 auto;
-		padding: 5rem 0;
-		h2 {
-			text-align: center;
-			margin-top: 0!important;
-			font-weight: 600;
-		}
-		p {
-			font-size: 18px;
-			text-align: center;
-		}
-		.btn {
-			@include textShadow;
-		}
-	}
-}
-
-#quote-4 {
-	overflow: auto;
-	display: flex;
-	.col-sm-7 {
-		padding: 2.5em;
+	.featured-subtext {
+		height: 130px;
 		.inner {
-			width: 100%;
-			max-width: 682.5px;
-			float: right;
-			h2 {
-				text-align: left;
-				margin-top: 0!important;
-				font-weight: 600;
-				max-width: 450px;
+			line-height: 280%;
+			position: absolute;
+			left: 31px;
+			bottom: 0;
+			letter-spacing: -2px;
+			font-size: 3.5em;
+			color: #fff;
+			text-shadow: 3px 3px 0px black;
+		}
+	}
+}
+
+.article-topper__meta-info {
+	border-top-color: rgba(0,0,0,0.2);
+}
+
+.article-topper__social-link--twitter {
+	background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/twitter-icon.svg);
+}
+
+.article-topper__social-link--facebook {
+	background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/facebook-icon.svg);
+}
+
+/* Create 'move up' section */
+.moveup {
+	margin-top: -5.5em;
+	z-index: 2;
+	position: relative;
+	.article-topper__overline-mod {
+		position: relative;
+		.article-topper__overline {
+			background: $red;
+			color: #fff;
+		}
+	}
+	.article-topper__width {
+		border-top: 5px solid $red;
+		padding: 1em 1.5em;
+		background: #fff;
+		position: relative;
+		&:before {
+			content: '';
+			background: $red;
+			width: 5px;
+			height: 5.5em;
+			top: -5px;
+			left: -5px;
+			position: absolute;
+		}
+		&:after {
+			content: '';
+			background: $red;
+			width: 5px;
+			height: 5.5em;
+			top: -5px;
+			right: -5px;
+			position: absolute;
+		}
+		.article-topper__hgroup {
+			background-color: #fff!important;
+			h1 {
+				color: black;
+				margin-bottom: .25em;
 			}
-			p {
-				font-size: 18px;
-				text-align: left;
+			.article-topper__byline {
+				font-family: akkurat,sans-serif;
+				font-size: 16px;
+				a {
+					color: #1a1a1a;
+				}
 			}
 		}
 	}
 }
 
+/* Article Content */
+.article-content {
+	padding-top: 0;
+	.article-body a:not(.media-img):not(.article__related-posts__link):not(.article__qa__intro__author-mod):not(.article-topper__social-link):not(.article-topper__byline__author-name):not(.t-link):not(.link-button) {
+		color: $red;
+		box-shadow: 0 -1px 0 rgba($red,0.4) inset, 0 1.5em 0 transparent inset;
+		&:hover {
+			background: black;
+			color: #fff;
+		}
+	}
+	p.pullQuote {
+		position: relative;
+		font-style: italic;
+		color: rgba(0,0,0,.6);
+		&:before {
+			content: "";
+			display: flex;
+			position: absolute;
+			left: -30px;
+			background: rgba(0,0,0,.6);
+			width: 3px;
+			height: 100%;
+		}
+	}
+}
+.article__featured-image-mod, .aligncenter {
+	max-width: 850px;
+	*+* {
+		margin-top: 0;
+	}
+	.article__image__caption, .wp-caption-text {
+		background: $red;
+		color: #fff;
+		padding: 1em;
+	}
+}
+.aligncenter {
+	*+* {
+		margin-top: -.8em;
+	}
+}
+.article-footer__meta {
+	.t-link--has-comma {
+		a.t-link {
+			border: 1px solid rgba($red, 0.7);
+			padding: .1em .5em;
+			display: inline-block;
+			margin-bottom: .5em;
+			margin-right: .15em;
+			border-radius: 3px;
+			color: rgba($red,0.7);
+			&:hover {
+				border: 1px solid $red;
+				background-color: $red;
+				color: #fff;
+				box-shadow: none;
+			}
+		}
+		&:not(:last-child):after {
+			color: $red;
+		}
+	}
+	.author {
+		a.t-link {
+			font-weight: 600;
+			color: $red;
+			box-shadow: 0 -1px 0 rgba($red,0.4) inset, 0 1.5em 0 transparent inset;
+			&:hover {
+				background: black;
+				color: #fff;
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+/* Scrolling Nav */
+.article-progress__nav-trigger {
+	background-image: url(http://news.northeastern.edu/wp-content/themes/neu-news-wp-theme/static/img/search-icon--white.svg);
+	background-color: $red;
+	width: 50px;
+	border-left: 1px solid black;
+	&:after {
+		border: 0px;
+	}
+}
+.article-progress__width {
+	max-width: 100%;
+}
+.article-progress__hgroup {
+	max-width: 750px;
+	margin: 0 auto;
+}
+.article-progress__social-list {
+	padding-right: 1em;
+	li {
+		padding-left: .5em;
+	}
+}
+
+/* Article Footer */
+.article-footer-recirc__width {
+	padding-top: 1.5em;
+}
+.article-footer-recirc__title {
+	border-top: 2px solid;
+}
+.index__split-posts {
+	.tease__hed {
+		display: block;
+		padding-top: .5em;
+		padding-bottom: 0;
+		margin: 0;
+	}
+	.tease__dek {
+		line-height: 150%;
+		padding: .5em 0 .25em 0;
+		margin-bottom: 0;
+		display: block;
+	}
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-	#quote-4 {
-		flex-direction: column;
-		.col-sm-7 {
-			padding: 1em 15px;
+	.icon {
+		i {
+			color: #fff;
+			font-size: 2em;
+			z-index: 3;
+			right: .5em;
+		}
+	}
+	.friending-made-easy {
+		margin-bottom: 84px;
+		.featured-text {
+			display: block;
+			font-size: 2em;
+		}
+	}
+	.av-container {
+		.aligncenter {
+			max-width: 1410px;
+			width: 100%!important;
 		}
 	}
 }
